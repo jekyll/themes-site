@@ -1,0 +1,29 @@
+---
+layout: default
+title: Jekyll Themes, by the community for the community
+overview: true
+---
+
+<section class="intro">
+  <div class="grid">
+    <div class="unit whole center-on-mobiles">
+      <p class="first">Jekyll themes created by the community, for the community.</p>
+    </div>
+  </div>
+</section>
+<section class="features">
+  <div class="grid">
+    {% for theme in site.posts | sort:title %}
+    <div class="unit one-third">
+      <h2>{{ theme.title }}</h2>
+      <p>
+        <a href="{{ site.github.url }}{{ theme.url }}">
+          <img src="{{ site.github.url }}/thumbnails/{{ theme.thumbnail }}" alt="{{ theme.title }}">
+        </a>
+      </p>
+      By <a href="{{ theme.author.url }}">{{ theme.author.name }}</a>
+    </div>
+    {% endfor %}
+    <div class="clear"></div>
+  </div>
+</section>

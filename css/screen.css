@@ -1,0 +1,23 @@
+---
+---
+
+{% capture screen %}
+/*                *\
+ * $normalize.css *
+\*                */
+{% include css/normalize.css %}
+/*                *\
+ * $gridism.css   *
+\*                */
+{% include css/gridism.css %}
+/*                *\
+ * $style.css     *
+\*                */
+{% include css/style.css %}
+{% endcapture %}
+
+{% if site.GH_ENV %}
+  {{ screen | strip_newlines | remove: '  ' }}
+{% else %}
+  {{ screen }}
+{% endif %}
