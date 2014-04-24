@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+  <section class="docs">
+    <div class="grid">
+
+        <article>
+          <h1><a href="{{ page.homepage }}">{{ page.title }} &rarr;</a></h1>
+          <section class="unit two-thirds">
+            {{ content }}
+            <p>
+              Created by <a href="{{ page.author.url }}">
+                {% if page.author.username %}
+                  <img src="https://github.com/{{ page.author.username }}.png"
+                       width="20"
+                       height="20"
+                       alt="{{ page.author.name }}"
+                       class="avatar">
+                {% endif %}
+                {{ page.author.name }}
+                {% if page.author.username %}(@{{ page.author.username }}){% endif %}
+              </a>
+            </p>
+            <p>
+              Interested? Check out <a href="{{ page.demo }}">a demo</a>.
+            </p>
+            <p>
+              License:
+              <a href="{{ page.license_link }}">{{ page.license }}</a>.
+            </p>
+          </section>
+          <section class="unit one-third">
+            <a href="{{ page.homepage }}">
+              <img src="{{ site.github.url }}/thumbnails/{{ page.thumbnail }}" alt="{{ page.title }}">
+            </a>
+          </section>
+          <div class="clear"></div>
+          <section class="download">
+            <h3>Download</h3>
+            <div class="highlight">
+              <pre><code class="bash"><span class="command">wget</span> <span class="string">"{{ page.download }}"</span></code></pre>
+            </div>
+            <div class="direct-link">
+              or <a href="{{ page.download }}">download the archive from your browser</a>.
+            </div>
+          </section>
+        </article>
+
+      <div class="clear"></div>
+
+    </div>
+  </section>

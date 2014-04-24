@@ -14,10 +14,6 @@
  * $style.css     *
 \*                */
 {% include css/style.css %}
-/*                *\
- * $pygments.css  *
-\*                */
-{% include css/pygments.css %}
 {% endcapture %}
 
 {% if site.GH_ENV %}

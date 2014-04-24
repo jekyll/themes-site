@@ -15,12 +15,13 @@ overview: true
   <div class="grid">
     {% for theme in site.posts %}
     <div class="unit one-third">
-      <h2>{{ page.title }}</h2>
+      <h2>{{ theme.title }}</h2>
       <p>
-        <a href="{{ page.repository_url }}">
-          <img src="{{ site.url }}/{{ page.thumbnail }}" alt="{{ page.title }}">
+        <a href="{{ site.github.url }}{{ theme.url }}">
+          <img src="{{ site.github.url }}/thumbnails/{{ theme.thumbnail }}" alt="{{ theme.title }}">
         </a>
       </p>
+      By <a href="{{ theme.author.url }}">{{ theme.author.name }}</a>
     </div>
     {% endfor %}
     <div class="clear"></div>
