@@ -1,0 +1,7 @@
+highlighter: pygments
+relative_permalinks: false
+permalink: /theme/:title/
+excerpt_separator: noifniof3nioaniof3nioafafinoafnoif
+repository: https://github.com/jekyll/themes-site
+jekyll_repo: https://github.com/jekyll/jekyll
+

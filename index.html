@@ -1,0 +1,28 @@
+---
+layout: default
+title: Jekyll &bull; Simple, blog-aware, static sites
+overview: true
+---
+
+<section class="intro">
+  <div class="grid">
+    <div class="unit whole center-on-mobiles">
+      <p class="first">Jekyll themes created by the community, for the community.</p>
+    </div>
+  </div>
+</section>
+<section class="features">
+  <div class="grid">
+    {% for theme in site.posts %}
+    <div class="unit one-third">
+      <h2>{{ page.title }}</h2>
+      <p>
+        <a href="{{ page.repository_url }}">
+          <img src="{{ site.url }}/{{ page.thumbnail }}" alt="{{ page.title }}">
+        </a>
+      </p>
+    </div>
+    {% endfor %}
+    <div class="clear"></div>
+  </div>
+</section>
