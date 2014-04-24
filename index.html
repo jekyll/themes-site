@@ -13,7 +13,7 @@ overview: true
 </section>
 <section class="features">
   <div class="grid">
-    {% for theme in site.posts %}
+    {% for theme in site.posts | sort:title %}
     <div class="unit one-third">
       <h2>{{ theme.title }}</h2>
       <p>
